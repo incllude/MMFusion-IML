@@ -6,8 +6,8 @@ import os
 import argparse
 import numpy as np
 from tqdm import tqdm
-from common.utils import AverageMeter
-from common.losses import TruForLossPhase2
+from mmfusion_iml.common.utils import AverageMeter
+from mmfusion_iml.common.losses import TruForLossPhase2
 from torch.utils.tensorboard import SummaryWriter
 from torch.utils.data import DataLoader
 import logging
@@ -15,13 +15,13 @@ import torch
 import torchvision.transforms.functional as TF
 
 
-from data.datasets import MixDataset
-from common.metrics import computeDetectionMetrics
-from models.cmnext_conf import CMNeXtWithConf
-from common.split_params import group_weight
-from common.lr_schedule import WarmUpPolyLR
-from models.modal_extract import ModalitiesExtractor
-from configs.cmnext_init_cfg import _C as config, update_config
+from mmfusion_iml.data.datasets import MixDataset
+from mmfusion_iml.common.metrics import computeDetectionMetrics
+from mmfusion_iml.models.cmnext_conf import CMNeXtWithConf
+from mmfusion_iml.common.split_params import group_weight
+from mmfusion_iml.common.lr_schedule import WarmUpPolyLR
+from mmfusion_iml.models.modal_extract import ModalitiesExtractor
+from mmfusion_iml.configs.cmnext_init_cfg import _C as config, update_config
 
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('-gpu', '--gpu', type=int, default=0, help='device, use -1 for cpu')

@@ -14,8 +14,7 @@ import cv2
 import sys
 import os
 
-# Add parent directory to path for importing mmfusion_iml
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# mmfusion_iml should be installed as a package
 
 try:
     import mmfusion_iml as mmf
@@ -32,6 +31,7 @@ def example_model_usage():
     try:
         # Create a simple config object
         class SimpleConfig:
+            NAME = 'CMNeXt'
             BACKBONE = 'CMNeXtMHSA-B2'
             NUM_CLASSES = 2
             MODALS = ['rgb']

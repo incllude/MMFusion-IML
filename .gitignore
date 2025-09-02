@@ -1,0 +1,305 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Machine Learning specific
+# Datasets (large files) - now in mmfusion_iml/data/
+mmfusion_iml/data/Casiav1/
+mmfusion_iml/data/Casiav2/
+mmfusion_iml/data/CocoGlide/
+mmfusion_iml/data/Columbia/
+mmfusion_iml/data/compRAISE/
+mmfusion_iml/data/corel-1k/
+mmfusion_iml/data/COVER/
+mmfusion_iml/data/DSO-1/
+mmfusion_iml/data/FantasticReality/
+mmfusion_iml/data/IMD2020/
+mmfusion_iml/data/tampCOCO/
+
+# Legacy data directory (if still exists)
+data/Casiav1/
+data/Casiav2/
+data/CocoGlide/
+data/Columbia/
+data/compRAISE/
+data/corel-1k/
+data/COVER/
+data/DSO-1/
+data/FantasticReality/
+data/IMD2020/
+data/tampCOCO/
+
+# Model checkpoints and weights
+ckpt/*.pth
+ckpt/*.pt
+ckpt/**/*.pth
+ckpt/**/*.pt
+pretrained/*.pth
+pretrained/*.pt
+pretrained/**/*.pth
+pretrained/**/*.pt
+
+# Experiment outputs
+experiments/runs/
+experiments/logs/
+experiments/outputs/
+experiments/results/
+
+# TensorBoard logs
+runs/
+logs/
+tensorboard_logs/
+
+# Weights & Biases
+wandb/
+
+# MLflow
+mlruns/
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Temporary files
+*.tmp
+*.temp
+.temporary/
+
+# Generated outputs
+outputs/
+results/
+predictions/
+
+# Large model files (>100MB should use Git LFS)
+*.bin
+*.safetensors
+
+# Config files with sensitive data
+config_local.py
+secrets.yaml
+.secrets/
+
+# Backup files
+*.bak
+*.backup
+
+# Test outputs
+test_outputs/
+test_results/
+
+# Package-specific ignores
+# Compiled package files
+mmfusion_iml/__pycache__/
+mmfusion_iml/**/__pycache__/
+mmfusion_iml/**/**/__pycache__/
+
+# Development and debug files
+debug/
+*.debug
+debug_*.py
+
+# Jupyter notebooks (if any)
+*.ipynb
+
+# Model artifacts and caches
+.cache/
+cache/
+*_cache/
+
+# Tensorboard and logging
+tb_logs/
+lightning_logs/
+
+# Hydra configuration outputs
+outputs/
+multirun/
+
+# DVC (Data Version Control)
+.dvc/
+*.dvc
+
+# Additional ML experiment tracking
+.neptune/
+comet_logs/
+
+# Local development files
+local_*
+*.local
+development/
+dev_*
+
+# Custom model configurations (may contain sensitive paths)
+*local.yaml
+*local.yml
+custom_configs/
+
+# Temporary experiment files
+temp_*
+tmp_*
+scratch/
+
+# Performance profiling
+*.prof
+profile_*
+profiling/
+
+# Documentation build artifacts
+docs/build/
+site/
+
+# Coverage reports
+htmlcov/
+.coverage*
+
+# Editor temporary files
+.vscode/settings.json
+.idea/workspace.xml
+*.sublime-workspace
+
+# OS generated files
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db

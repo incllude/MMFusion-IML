@@ -47,10 +47,12 @@ class DiceLoss(torch.nn.Module):
 
 
 class TruForLoss(torch.nn.Module):
-    def __init__(self, lambda_ce: float = 0.3, ignore_index: int = -1, weights=torch.tensor([0.5, 2.5], device='cuda:0')):
+    def __init__(self, lambda_ce: float = 0.3, ignore_index: int = -1, weights=None):
         super().__init__()
         self.lambda_ce = lambda_ce
         self.ignore_index = ignore_index
+        if weights is None:
+            weights = torch.tensor([0.5, 2.5])
         self.criterion_bce = torch.nn.CrossEntropyLoss(weight=weights, ignore_index=self.ignore_index)
         self.criterion_dice = DiceLoss(ignore_index=self.ignore_index)
 
