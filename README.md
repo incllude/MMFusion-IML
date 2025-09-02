@@ -20,6 +20,38 @@ Official implementation (code and trained models) of the MMM 2024 paper: "Explor
 
 ![Architecture](figs/architecture.png)
 
+## 🚀 Using as a Python Library
+
+This repository can now be used as a Python library in your own projects! Install and import the components you need:
+
+### Installation
+```bash
+# Clone the repository
+git clone <your-repo-url>
+cd MMFusion-IML
+
+# Install as a package
+pip install -e .
+```
+
+### Quick Start
+```python
+import mmfusion_iml as mmf
+
+# Load models
+model = mmf.models.CMNeXtConf(config)
+modal_extractor = mmf.models.ModalExtract(modals=['bayar', 'srm'])
+
+# Use datasets
+dataset = mmf.data.ManipulationDataset('data.txt', image_size=512, train=True)
+
+# Apply utilities
+srm_filter = mmf.common.SRMFilter()
+bayar_conv = mmf.common.BayarConv2d(3, 3, padding=2)
+```
+
+📖 **For detailed usage examples and API documentation, see [USAGE.md](USAGE.md)**
+
 ## Datasets
 
 Download train datasets:

@@ -143,3 +143,6 @@ def add_commandline_networkparams(parser, name, features, depth, kernel, activat
     parser.add_argument("--{}.{}".format(name, "no-bn"), action="store_false", dest=bnarg)
     parser.set_defaults(**{bnarg: bn})
 
+# Alias for easier import
+DnCNNNoiseprint = DnCNN
+

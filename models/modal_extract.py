@@ -4,8 +4,8 @@ in August 2023 @ ITI-CERTH
 """
 import torch
 import torch.nn as nn
-from common.utils import SRMFilter, BayarConv2d
-from models.DnCNN_noiseprint import make_net
+from ..common.utils import SRMFilter, BayarConv2d
+from .DnCNN_noiseprint import make_net
 import logging
 import os
 
@@ -93,3 +93,6 @@ if __name__ == '__main__':
     ax[3].set_title('SRM')
 
     plt.show()
+
+# Alias for easier import
+ModalExtract = ModalitiesExtractor

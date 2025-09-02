@@ -5,11 +5,11 @@ in August 2023 @ ITI-CERTH
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
-from models.base import BaseModel
-from models.heads import SegFormerHead
-from models.layers import trunc_normal_
+from .base import BaseModel
+from .heads import SegFormerHead
+from .layers import trunc_normal_
 import logging
-from models.backbones import *
+from .backbones import *
 
 
 class WSCMNeXtWithConf(BaseModel):
@@ -153,6 +153,9 @@ def load_dualpath_model(model, model_file, backbone):
     msg = model.load_state_dict(state_dict, strict=False)
     del state_dict
 
+
+# Alias for easier import
+WSCMNeXtConf = WSCMNeXtWithConf
 
 if __name__ == '__main__':
     from configs.cmnext_init_cfg import _C as cfg

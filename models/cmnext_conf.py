@@ -5,8 +5,8 @@ in August 2023 @ ITI-CERTH
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
-from models.base import BaseModel
-from models.heads import SegFormerHead
+from .base import BaseModel
+from .heads import SegFormerHead
 import logging
 
 
@@ -150,6 +150,9 @@ def load_dualpath_model(model, model_file, backbone):
     msg = model.load_state_dict(state_dict, strict=False)
     del state_dict
 
+
+# Alias for easier import
+CMNeXtConf = CMNeXtWithConf
 
 if __name__ == '__main__':
     from configs.cmnext_init_cfg import _C as cfg
